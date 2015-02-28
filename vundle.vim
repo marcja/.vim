@@ -39,9 +39,18 @@ Plugin 'othree/html5.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'scrooloose/syntastic'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'trapd00r/vim-syntax-vidir-ls'
+
+" google plugins
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmtlib'
+Plugin 'google/vim-codefmt'
+
+Plugin 'google/vim-glaive'
 
 " Automatically install bundles on first run
 "if !isdirectory(expand("~/.vim/bundle/vim-airline"))
