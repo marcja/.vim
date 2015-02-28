@@ -49,7 +49,6 @@ Plugin 'trapd00r/vim-syntax-vidir-ls'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmtlib'
 Plugin 'google/vim-codefmt'
-
 Plugin 'google/vim-glaive'
 
 " Automatically install bundles on first run
@@ -59,6 +58,7 @@ Plugin 'google/vim-glaive'
 "endif
 
 call vundle#end()
+call glaive#Install()
 
 "-------------------------------------------------------------------------------
 " vundle boilerplate
