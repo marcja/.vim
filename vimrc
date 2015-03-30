@@ -214,6 +214,9 @@ endif
 nnoremap sk :CtrlP<CR>
 nnoremap sj :CtrlPBuffer<CR>
 
+" airblade/vim-gitgutter
+highlight clear SignColumn
+
 " airline
 let g:airline_powerline_fonts = 1
 

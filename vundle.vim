@@ -30,6 +30,7 @@ Plugin 'gmarik/vundle'
 
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
