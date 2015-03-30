@@ -23,6 +23,8 @@ endif
 if &t_Co >= 256 || has('gui_running')
   set guifont=Meslo\ LG\ S\ DZ\ Regular\ for\ Powerline:h12
   set background=dark
+  let g:solarized_termcolors=256
+  let g:solarized_termtrans=1
   colorscheme solarized
 endif
 
