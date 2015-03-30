@@ -212,17 +212,20 @@ endif
 "-------------------------------------------------------------------------------
 " plugins
 "-------------------------------------------------------------------------------
-" ctrlp
-nnoremap sk :CtrlP<CR>
-nnoremap sj :CtrlPBuffer<CR>
-
 " airblade/vim-gitgutter
 highlight clear SignColumn
 
-" airline
+" bling/vim-airline
 let g:airline_powerline_fonts = 1
 
-" silver searcher settings
+" kien/ctrlp.vim
+nnoremap sk :CtrlP<CR>
+nnoremap sj :CtrlPBuffer<CR>
+
+" sjl/gundo.vim
+nnoremap <F5> :GundoToggle<CR>
+
+" rking/ag.vim
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .git
       \ --ignore .svn
