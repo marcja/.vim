@@ -48,7 +48,7 @@ set number
 set scrolloff=3
 
 if v:version >= 703
-  set colorcolumn=80
+  set colorcolumn=81
   set relativenumber
 endif
 
@@ -118,7 +118,7 @@ set tabstop=2     "number of spaces that a <Tab> in the file counts for
 set autoread
 set modelines=0
 set wildmenu
-set wildmode=longest:full
+set wildmode=list:longest,full
 
 " 20 the swap file
 set directory=/var/tmp,/tmp
@@ -165,6 +165,7 @@ noremap <C-l> $
 nnoremap / /\v
 vnoremap / /\v
 nnoremap <silent> <leader>. :nohlsearch<cr>
+nnoremap <silent> <BS> :nohlsearch<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 map! <C-BS> <C-W>
