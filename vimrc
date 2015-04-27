@@ -33,6 +33,7 @@ endif
 " options
 "-------------------------------------------------------------------------------
 "  1 important
+set nocompatible
 set pastetoggle=<F2>
 
 "  2 moving around, searching and patterns
@@ -105,6 +106,9 @@ if has('macunix')
   set dictionary+=/usr/share/dict/words
 endif
 
+" 15 folding
+set foldcolumn=2
+
 " 15 tabs and indenting
 set autoindent
 set copyindent
@@ -127,6 +131,7 @@ set noswapfile
 " 21 command line editing
 set history=1000
 if v:version >= 703
+  set viewdir=~/.vim/.view
   set undodir=~/.vim/.undo
   set undofile
 endif
@@ -136,18 +141,7 @@ set encoding=utf-8
 set termencoding=utf-8
 
 " 26 various
-"set gdefault
-"set statusline=
-"set statusline+=%n
-"set statusline+=\ %f
-"if v:version >= 703
-"  set statusline+=\ %(%m%y%q%W%)
-"else
-"  set statusline+=\ %(%m%y%W%)
-"endif
-"set statusline+=%=
-""set statusline+=%{fugitive#statusline()}
-"set statusline+=[%c%V:%l/%L]
+set gdefault
 
 "-------------------------------------------------------------------------------
 " mappings
@@ -168,7 +162,7 @@ nnoremap <silent> <leader>. :nohlsearch<cr>
 nnoremap <silent> <BS> :nohlsearch<cr>
 nnoremap <tab> %
 vnoremap <tab> %
-map! <C-BS> <C-W>
+noremap! <C-BS> <C-W>
 
 " split windows
 nnoremap <silent> <leader>ws :split<CR>
@@ -205,7 +199,7 @@ if has('autocmd')
 
     " Bind <F1> to show the keyword under cursor
     " general help can still be entered manually, with :h
-    autocmd filetype vim noremap <buffer> <F1> <Esc>:help <C-r><C-w><CR>
+    autocmd filetype vim noremap  <buffer> <F1> <Esc>:help <C-r><C-w><CR>
     autocmd filetype vim noremap! <buffer> <F1> <Esc>:help <C-r><C-w><CR>
   augroup end "}}}
 endif
@@ -237,3 +231,12 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore review
       \ -g ""'
 let g:ackprg = 'ag --vimgrep'
+
+" Lokaltog/vim-easymotion
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
+
+" syntastic
+let g:syntastic_javascript_closurecompiler_script = 'closure-compiler'
+let g:syntastic_javascript_checkers = ['closurecompiler', 'gjslint']
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_always_populate_loc_list = 1
